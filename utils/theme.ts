@@ -5,7 +5,13 @@ import { typographyStyles } from "@horizon/typography";
 
 export default createMuiTheme({
   palette: {
-    primary: orange,
+    primary: { ...orange, contrastText: grays.white },
+    text: {
+      primary: grays["80"],
+      secondary: grays["60"],
+      disabled: grays["40"],
+      hint: grays["40"]
+    },
     background: { default: grays["1"] }
   },
   typography: typographyStyles

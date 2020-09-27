@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 import TypographyDemo from "components/TypographyDemo";
+import ButtonDemo from "components/ButtonDemo";
 import ColorDemo from "components/ColorDemo";
 
 const useStyles = makeStyles({
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
   return (
     <div className={container}>
       <TypographyDemo className={demoContainer} />
+      <ButtonDemo className={demoContainer} />
       <ColorDemo className={demoContainer} />
     </div>
   );
