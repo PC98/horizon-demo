@@ -2,7 +2,7 @@ import clsx from "clsx";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 import HorizonButton from "@horizon/button";
-import { ArrowRightIcon } from "@horizon/icons";
+import { LongArrowRightIcon } from "@horizon/icons";
 
 const useStyles = makeStyles({
   container: {
@@ -23,7 +23,7 @@ const ButtonDemo: React.FC<Props> = ({ className }) => {
     <div className={clsx(className, container)}>
       <HorizonButton variant="contained">Button</HorizonButton>
       <HorizonButton variant="outlined">Button</HorizonButton>
-      <HorizonButton endIcon={<ArrowRightIcon />}>Action</HorizonButton>
+      <HorizonButton endIcon={<LongArrowRightIcon />}>Action</HorizonButton>
     </div>
   );
 };

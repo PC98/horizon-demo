@@ -34,7 +34,7 @@ const ColorBox: React.FC<Props> = props => {
   return (
     <div className={clsx(props.className, container)}>
       <Paper variant="outlined" classes={{ root, rounded }} />
-      <HorizonTypography variant="h3">{props.text}</HorizonTypography>
+      <HorizonTypography variant="h4">{props.text}</HorizonTypography>
       {props.hideColorCaption !== true && (
         <HorizonTypography variant="caption">{props.color}</HorizonTypography>
       )}

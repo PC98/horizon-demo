@@ -12,7 +12,7 @@ export default createMuiTheme({
       disabled: grays["40"],
       hint: grays["40"]
     },
-    background: { default: grays["1"] }
+    background: { default: grays.bg }
   },
   typography: typographyStyles
 });

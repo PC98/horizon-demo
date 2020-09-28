@@ -1,6 +1,6 @@
 export default {
   white: "#FFFFFF",
-  1: "#FAFAFA",
+  bg: "#FAFAFA",
   5: "#F0F0F0",
   20: "#D2D2D2",
   40: "#999999",

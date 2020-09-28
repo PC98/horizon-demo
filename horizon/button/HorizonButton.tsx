@@ -14,7 +14,7 @@ const useStyles = makeStyles(({ palette }: Theme) =>
     },
     outlined: {
       textTransform: "capitalize",
-      color: palette.text.primary,
+      padding: "4px 14px",
       borderWidth: 2,
       borderColor: palette.primary.main,
       "&:hover": {
@@ -22,13 +22,17 @@ const useStyles = makeStyles(({ palette }: Theme) =>
         borderColor: palette.primary.main
       }
     },
+    text: {
+      paddingLeft: 12,
+      paddingRight: 12
+    },
     label: ({ variant }: Props) => {
       let labelStyle;
 
       switch (variant) {
         case "contained":
         case "outlined":
-          labelStyle = typographyStyles["h3"];
+          labelStyle = typographyStyles["h4"];
           break;
         case "text":
         case undefined:
@@ -51,12 +55,12 @@ const useStyles = makeStyles(({ palette }: Theme) =>
 );
 
 const HorizonButton: React.FC<Props> = props => {
-  const { root, label, outlined, contained } = useStyles(props);
+  const { root, label, outlined, contained, text } = useStyles(props);
   const { children, ...rest } = props;
 
   return (
     <Button
-      classes={{ root, label, outlined, contained }}
+      classes={{ root, label, outlined, contained, text }}
       color="primary"
       {...rest}
     >

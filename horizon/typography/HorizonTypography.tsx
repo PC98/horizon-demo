@@ -2,7 +2,16 @@ import React from "react";
 import { TypographyStyleOptions } from "@material-ui/core/styles/createTypography";
 import Typography from "@material-ui/core/Typography";
 
-type Variant = "h1" | "h2" | "h3" | "overline" | "body1" | "caption";
+type Variant =
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "body1"
+  | "body2"
+  | "overline"
+  | "caption";
 
 export const typographyStyles: Readonly<Record<
   Variant,
@@ -28,11 +37,45 @@ export const typographyStyles: Readonly<Record<
   },
   h3: {
     fontFamily: "Visby CF",
+    fontWeight: "bold",
+    fontSize: "1.5rem",
+    fontStyle: "normal",
+    fontFeatureSettings: "'liga' off",
+    lineHeight: "140%",
+    letterSpacing: "normal"
+  },
+  h4: {
+    fontFamily: "Visby CF",
     fontWeight: 800,
     fontSize: "1rem",
     fontStyle: "normal",
     fontFeatureSettings: "'liga' off",
     lineHeight: "130%",
+    letterSpacing: "normal"
+  },
+  h5: {
+    fontFamily: "Visby CF",
+    fontWeight: "bold",
+    fontSize: "1rem",
+    fontStyle: "normal",
+    fontFeatureSettings: "'liga' off",
+    lineHeight: "130%",
+    letterSpacing: "normal"
+  },
+  body1: {
+    fontFamily: "Open Sans",
+    fontWeight: "normal",
+    fontSize: "1.25rem",
+    fontStyle: "normal",
+    lineHeight: "150%",
+    letterSpacing: "normal"
+  },
+  body2: {
+    fontFamily: "Open Sans",
+    fontWeight: "normal",
+    fontSize: "1rem",
+    fontStyle: "normal",
+    lineHeight: "150%",
     letterSpacing: "normal"
   },
   overline: {
@@ -43,14 +86,6 @@ export const typographyStyles: Readonly<Record<
     lineHeight: "130%",
     letterSpacing: "0.05em",
     textTransform: "uppercase"
-  },
-  body1: {
-    fontFamily: "Open Sans",
-    fontWeight: "normal",
-    fontSize: "1rem",
-    fontStyle: "normal",
-    lineHeight: "150%",
-    letterSpacing: "normal"
   },
   caption: {
     fontFamily: "Open Sans",
@@ -67,7 +102,7 @@ type Props = Omit<React.ComponentProps<typeof Typography>, "variant"> & {
 };
 
 const HorizonTypography: React.FC<Props> = ({ children, variant, ...rest }) => {
-  const horizonVariant: Variant = variant ?? "body1";
+  const horizonVariant: Variant = variant ?? "body2";
   return (
     <Typography variant={horizonVariant} {...rest}>
       {children}
