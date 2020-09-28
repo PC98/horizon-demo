@@ -14,7 +14,7 @@ const useStyles = makeStyles(({ palette }: Theme) =>
     },
     outlined: {
       textTransform: "capitalize",
-      padding: "4px 14px",
+      padding: "4px 14px", // to take into account the higher borderWidth
       borderWidth: 2,
       borderColor: palette.primary.main,
       "&:hover": {
